@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO LIST</title>
+    <link rel="stylesheet" href="./src/scss/style.css">
+    <!-- FONT AWESOME LINK -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Skranji&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-wrapper">
+        <span class="decoration">
+            <h1>TO DO LIST</h1>
+        </span>
+        <div class="app-content" id="appContent">
+            <div class="input-wrapper">
+                <button type="button" id="addBtn">ADD TASK</button>
+            <div class="task-input">
+                <input type="text" placeholder="Enter task" id="input">
+                <i class="fa-solid fa-circle-xmark" id="inputClear"></i>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="tasks-container">
+        <div class="task-column">
+            <span class="decoration">
+                <h1>OPEN</h1>
+            </span>
+            <div class="tasks-items">
+     
+            </div>
+            <span class="decoration"></span>
+        </div>
+        <div class="task-column">
+            <span class="decoration">
+                <h1>IN PROGRESS</h1>
+            </span>
+            <div class="tasks-items">
+             <!-- <p>I am task
+                <i class="fa-solid fa-circle-xmark"></i> -->
+             <!-- </p> -->
+            </div>
+            <span class="decoration"></span>
+        </div>
+        <div class="task-column">
+            <span class="decoration">
+                <h1>COMPLETED</h1>
+            </span>
+            <div class="tasks-items">
+
+            </div>
+            <span class="decoration"></span>
+        </div>
+    </div>
+
+</body>
+<script src="./src/js/app.js"></script>
+<script src="./src/js/drag.js"></script>
+
+</html>

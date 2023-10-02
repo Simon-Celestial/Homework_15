@@ -1,0 +1,80 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  flex-direction: column;
+  width: 100vw;
+  overflow-x: hidden;
+  padding: 20px 20px 100px 20px;
+  background-color: rgb(0, 0, 0);
+  position: relative;
+  font-family: 'Young Serif', serif;
+  cursor: url("../cursors/finger.png"), default;
+
+}
+.preloader {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    z-index: 999;
+    img {
+        width: 150px;
+        height: 150px;
+    }
+}
+.showMoreBtn {
+  position: fixed;
+  padding: 20px 40px;
+  bottom: 15px;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: green;
+  font-size: 20px;
+  visibility: hidden;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+.person-wrapper {
+  display: flex;
+  width: 100%;
+  height: auto;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: auto;
+  .person {
+    border: 2px solid red;
+    flex-direction: column;
+    display: flex;
+    width: 350px;
+    height: auto;
+    gap: 15px;
+    background-color: rgb(49, 49, 49);
+    padding: 15px;
+
+    img {
+      width: 50%;
+      border-radius: 50%;
+      object-position: center;
+      object-fit: cover;
+      align-self: center;
+      outline: 2px solid red;
+      outline-offset: 5px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 14px;
+      color: white;
+      align-self: center;
+      white-space: nowrap;
+    }
+  }
+}
