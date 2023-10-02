@@ -8,7 +8,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 100vw;
-  height: auto;
+  height: 100vh;
   scroll-behavior: smooth;
   align-items: center;
   padding: 20px 20px;
@@ -109,6 +109,8 @@ body {
     border: 2px solid black;
     border-radius: 10px;
     overflow: hidden;
+    user-select: none;
+
   }
 }
 .tasks-items {
@@ -124,6 +126,7 @@ body {
     position: relative;
     word-break: break-all;
     transition: 0.3s ease;
+    cursor: grab;
     i {
       position: absolute;
       right: 10px;
@@ -140,4 +143,9 @@ body {
   &:hover {
     color: gray;
   }
+}
+.is-dragging {
+  background-color: black;
+  color: white;
+  scale: 1.02;
 }
