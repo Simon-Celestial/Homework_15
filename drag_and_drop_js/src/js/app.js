@@ -6,17 +6,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const addBtn = document.getElementById("addBtn");
     const inputClear = document.getElementById("inputClear");
     const tasksItems = document.querySelector(".tasks-items");
-
     const addTask = () => {
         if (input.value.trim() !== "") {
             let taskRemover = document.createElement("i");
             taskRemover.classList.add("fa-solid", "fa-circle-xmark");
             let task = document.createElement("p");
-            // task.setAttribute ("draggable","true");
+            task.classList.add("task");
+            task.setAttribute("draggable","true");
             task.textContent = input.value;
             task.appendChild(taskRemover);
-            tasksItems.appendChild(task);
 
+            task.addEventListener("dragstart", () => {
+                task.classList.add("is-dragging");
+            });
+            task.addEventListener("dragend", () => {
+                task.classList.remove("is-dragging");
+            });
+            tasksItems.appendChild(task);
             taskRemover.addEventListener("click", () => {
                 task.remove();
             });
@@ -26,7 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
             alert("You can't add an empty task!");
         }
     };
-
     addBtn.addEventListener("click", () => {
         addTask();
     });
@@ -36,8 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
             addTask();
         }
     });
-
     inputClear.addEventListener("click", () => {
         input.value = "";
-    });
+    });      
 });
